@@ -1,0 +1,356 @@
+
+/* =========================================
+   SERMONS PAGE - WALAYTA SODO KALEHIWOT
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #f6f7fb;
+    color: #253047;
+    font-family: Arial, "Noto Sans Ethiopic", sans-serif;
+    line-height: 1.6;
+}
+
+/* Navigation */
+header {
+    background: #102c4a;
+    color: white;
+    padding: 20px 6%;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.brand {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #e6bd64;
+}
+
+.language-button {
+    border: 1px solid #e6bd64;
+    background: transparent;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+.language-button:hover {
+    background: #e6bd64;
+    color: #102c4a;
+}
+
+/* =========================================
+   HERO SECTION - SERMON IMAGE
+========================================= */
+
+.hero {
+    margin-top: 25px;
+
+    background:
+        linear-gradient(
+            rgba(12, 35, 59, 0.78),
+            rgba(23, 59, 99, 0.86)
+        ),
+        url("../images/sermon.jpg");
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    color: white;
+    text-align: center;
+    padding: 85px 20px;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin: 0 0 10px;
+    color: white;
+}
+
+.hero p {
+    font-size: 17px;
+    margin: 0;
+    color: #e5edf5;
+}
+
+/* Main content */
+.container {
+    max-width: 1200px;
+    padding: 45px 20px;
+    margin: auto;
+    min-height: 350px;
+}
+
+/* Sermon cards */
+.sermon-grid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(min(100%, 320px), 1fr)
+    );
+    gap: 28px;
+}
+
+.sermon-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.sermon-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Video player */
+.video {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #e2e8f0;
+    position: relative;
+}
+
+.video iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.no-video {
+    display: grid;
+    place-items: center;
+    height: 100%;
+    padding: 20px;
+    color: #64748b;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* Sermon information */
+.sermon-content {
+    padding: 22px;
+}
+
+.sermon-content h2 {
+    font-size: 21px;
+    line-height: 1.4;
+    margin: 0 0 12px;
+    color: #173b63;
+}
+
+.sermon-content h2.am {
+    font-size: 22px;
+}
+
+.meta {
+    color: #64748b;
+    font-size: 14px;
+    margin: 8px 0;
+}
+
+.description {
+    color: #475569;
+    font-size: 15px;
+    margin-top: 15px;
+    white-space: pre-line;
+}
+
+/* Empty sermon message */
+.empty {
+    background: white;
+    padding: 45px 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.empty h2 {
+    color: #173b63;
+    margin-top: 0;
+}
+
+.empty p {
+    color: #64748b;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background: #102c4a;
+    color: white;
+    padding: 25px 15px;
+    margin-top: 35px;
+    font-size: 14px;
+}
+
+/* Language switching */
+[hidden] {
+    display: none !important;
+}
+
+.language-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 25px auto;
+}
+
+.language-buttons button {
+    padding: 10px 22px;
+    border: 1px solid #d4af37;
+    border-radius: 6px;
+    background: #ffffff;
+    color: #333333;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.language-buttons button.active {
+    background: #d4af37;
+    color: #ffffff;
+}
+
+/* Sermons footer */
+.sermons-footer {
+    text-align: center;
+    padding: 35px 20px 25px;
+    margin-top: 50px;
+}
+
+.sermons-footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.sermons-footer-logo {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    border: 3px solid #d4af37;
+    background: #ffffff;
+    display: block;
+    margin: 0 auto 12px;
+}
+
+.sermons-footer-brand h3 {
+    margin: 0 0 8px;
+}
+
+.sermons-footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 18px;
+}
+
+.sermons-footer-links a {
+    text-decoration: none;
+}
+
+.sermons-footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 650px) {
+    header {
+        padding: 18px 5%;
+    }
+
+    .nav {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    nav {
+        gap: 13px;
+    }
+
+    .hero {
+        padding: 60px 15px;
+    }
+
+    .hero h1 {
+        font-size: 27px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .container {
+        padding: 30px 15px;
+    }
+
+    .sermon-grid {
+        gap: 20px;
+    }
+
+    .sermon-content {
+        padding: 18px;
+    }
+}
+
+@media (max-width: 600px) {
+    .sermons-footer-logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .sermons-footer-links {
+        gap: 12px;
+    }
+
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .sermon-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* Space between navigation header and hero */
+.sermon-hero {
+    margin-top: 25px;
+}

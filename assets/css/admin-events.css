@@ -1,0 +1,383 @@
+
+/* ========================================
+   ADMIN EVENTS MANAGEMENT PAGE
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, "Noto Sans Ethiopic", sans-serif;
+    background: #f3f5f9;
+    color: #243047;
+    line-height: 1.6;
+}
+
+/* ========================================
+   ADMIN NAVIGATION HEADER
+======================================== */
+
+header.admin-navbar {
+    width: 100%;
+    background: #102d46 !important;
+    color: #ffffff;
+    padding: 12px 5%;
+    border: none;
+    box-shadow: none;
+}
+
+.admin-navbar .brand {
+    background: transparent;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.admin-navbar .brand-name {
+    color: #ffffff;
+}
+
+.admin-brand-label {
+    display: block;
+    font-size: 11px;
+    font-weight: normal;
+    color: #e4b65d;
+    margin-top: 3px;
+}
+
+.admin-navbar nav {
+    background: transparent !important;
+    border: none;
+    padding: 0;
+    gap: 16px;
+}
+
+.admin-navbar nav a {
+    color: #ffffff;
+    font-size: 13px;
+    text-decoration: none;
+    margin: 0;
+}
+
+.admin-navbar nav a:hover {
+    color: #e4b65d;
+    text-decoration: none;
+}
+
+/* ========================================
+   ADMIN PAGE CONTAINER
+======================================== */
+
+.admin-container {
+    width: 95%;
+    max-width: 1400px;
+    margin: 35px auto;
+}
+
+/* ========================================
+   PAGE HEADER
+======================================== */
+
+.page-header {
+    background: #ffffff;
+    padding: 25px 30px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+.page-header h1 {
+    color: #17365d;
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.page-header p {
+    color: #777777;
+    font-size: 15px;
+}
+
+.back-button {
+    display: inline-block;
+    background: #17365d;
+    color: #ffffff;
+    padding: 11px 20px;
+    text-decoration: none;
+    border-radius: 7px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.back-button:hover {
+    background: #24558c;
+}
+
+/* ========================================
+   CONTENT PANELS
+======================================== */
+
+.panel {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 24px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 9px rgba(0, 0, 0, 0.06);
+}
+
+.panel h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #173b63;
+    font-size: 22px;
+}
+
+/* ========================================
+   EVENT FORM
+======================================== */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 0;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+.field label {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.field input,
+.field textarea {
+    width: 100%;
+    min-width: 0;
+    padding: 11px;
+    border: 1px solid #cbd3df;
+    border-radius: 6px;
+    font: inherit;
+    color: #243047;
+    background: #ffffff;
+}
+
+.field textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.field input:focus,
+.field textarea:focus {
+    outline: 2px solid #8ab5e4;
+    border-color: #285b91;
+}
+
+/* ========================================
+   BUTTONS
+======================================== */
+
+.panel button,
+.panel .button {
+    display: inline-block;
+    border: 0;
+    border-radius: 6px;
+    padding: 10px 15px;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+}
+
+.primary {
+    background: #1d5b91;
+    color: #ffffff;
+}
+
+.primary:hover {
+    background: #17466f;
+}
+
+.secondary {
+    background: #e6ebf2;
+    color: #243047;
+}
+
+.secondary:hover {
+    background: #d4dce7;
+}
+
+.danger {
+    background: #a92c36;
+    color: #ffffff;
+}
+
+.danger:hover {
+    background: #85212a;
+}
+
+.actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.inline-form {
+    display: inline;
+    margin: 0;
+}
+
+/* ========================================
+   SUCCESS AND ERROR MESSAGES
+======================================== */
+
+.notice {
+    padding: 14px 18px;
+    border-radius: 7px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.notice.success {
+    background: #e5f7eb;
+    color: #176b35;
+    border-left: 5px solid #28a745;
+}
+
+.notice.failure {
+    background: #fde8e8;
+    color: #a61b1b;
+    border-left: 5px solid #dc3545;
+}
+
+/* ========================================
+   EVENTS TABLE
+======================================== */
+
+.table-wrap {
+    overflow-x: auto;
+    width: 100%;
+}
+
+.panel table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 700px;
+}
+
+.panel th,
+.panel td {
+    padding: 13px 10px;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid #e4e8ee;
+    overflow-wrap: anywhere;
+}
+
+.panel th {
+    background: #f0f4f8;
+    color: #173b63;
+}
+
+.panel tbody tr:hover {
+    background: #f7f9fc;
+}
+
+.subtext {
+    color: #5c6677;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+/* ========================================
+   ADMIN FOOTER
+======================================== */
+
+.admin-footer {
+    width: 100%;
+    background: #102d46;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 15px;
+    margin-top: 50px;
+    font-size: 13px;
+}
+
+.admin-footer p {
+    margin: 5px 0;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 850px) {
+
+    .admin-navbar {
+        padding: 12px 4%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .admin-container {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .page-header h1 {
+        font-size: 23px;
+    }
+
+    .panel {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .full-width {
+        grid-column: auto;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .page-header h1 {
+        font-size: 20px;
+    }
+
+    .back-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .panel {
+        padding: 17px;
+    }
+}

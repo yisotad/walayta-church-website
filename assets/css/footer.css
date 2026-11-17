@@ -1,0 +1,110 @@
+
+/* =========================================
+   SHARED FOOTER - WALAYTA SODO KALEHIWOT
+   Matches the homepage footer design
+========================================= */
+
+.site-footer {
+    --footer-navy: #102d46;
+    --footer-gold: #c99b42;
+    --footer-gold-light: #e8bd68;
+
+    background: var(--footer-navy);
+    color: #ffffff;
+    padding: 55px 8% 20px;
+    margin-top: 0;
+}
+
+.site-footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 35px;
+    padding-bottom: 35px;
+}
+
+.site-footer .footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.site-footer .footer-church-logo {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 15px;
+    border: 3px solid #d4af37;
+    background: #ffffff;
+}
+
+.site-footer .footer-brand h3 {
+    color: #ffffff;
+    margin: 12px 0 5px;
+    font-size: 19px;
+}
+
+.site-footer .footer-brand p {
+    color: var(--footer-gold-light);
+    letter-spacing: 3px;
+    font-size: 12px;
+}
+
+.site-footer .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+.site-footer .footer-links a {
+    color: #e5eee9;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.site-footer .footer-links a:hover {
+    color: var(--footer-gold-light);
+}
+
+.site-footer .footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding-top: 18px;
+    text-align: center;
+    color: #d0ddd6;
+    font-size: 13px;
+}
+
+.site-footer .footer-bottom p {
+    margin: 0;
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 600px) {
+    .site-footer {
+        padding: 45px 6% 20px;
+    }
+
+    .site-footer .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .site-footer .footer-brand {
+        align-self: center;
+    }
+
+    .site-footer .footer-church-logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .site-footer .footer-links {
+        flex-direction: column;
+        gap: 12px;
+    }
+}

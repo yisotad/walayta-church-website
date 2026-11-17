@@ -1,0 +1,77 @@
+
+/* Admin logout page styles */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background: #eef2ef;
+    color: #20352b;
+}
+
+.logout-card {
+    width: 100%;
+    max-width: 460px;
+    padding: 32px;
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 8px 30px #14213d15;
+    text-align: center;
+}
+
+.logout-icon {
+    width: 64px;
+    height: 64px;
+    display: grid;
+    place-items: center;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: #e5f2e9;
+    color: #1d6948;
+    font-size: 30px;
+}
+
+h1 {
+    margin: 0 0 12px;
+    font-size: 26px;
+}
+
+p {
+    color: #66756c;
+    line-height: 1.7;
+}
+
+.logout-error {
+    color: #b42318;
+    background: #fff0ef;
+    padding: 12px;
+    border-radius: 6px;
+}
+
+.logout-link {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 12px 20px;
+    border-radius: 6px;
+    background: #1d503b;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.logout-link:hover {
+    background: #28694d;
+}
+
+@media (max-width: 480px) {
+    .logout-card {
+        padding: 24px;
+    }
+}

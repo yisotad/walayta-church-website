@@ -1,0 +1,14 @@
+
+# Private database configuration
+config/db.php
+.env
+
+# Database exports and backups
+*.sql
+*.log
+*.bak
+*.tmp
+
+# Windows files
+Thumbs.db
+desktop.ini

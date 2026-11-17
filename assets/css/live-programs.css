@@ -1,0 +1,483 @@
+
+/* ==========================================
+   LIVE PROGRAMS ADMIN - PREMIUM DESIGN
+   ========================================== */
+
+.live-admin-container {
+    width: 94% !important;
+    max-width: 1200px !important;
+    margin: 35px auto 65px !important;
+    color: #243047;
+    font-family: Arial, "Noto Sans Ethiopic", sans-serif;
+}
+
+/* PAGE HEADER */
+.live-admin-container .live-page-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 25px;
+    padding: 35px !important;
+    margin-bottom: 30px;
+    background: linear-gradient(120deg, #102d46, #173d32) !important;
+    border-radius: 16px;
+    color: #fff;
+    box-shadow: 0 10px 30px rgba(16, 45, 70, .15);
+}
+
+.live-admin-container .live-page-header h1 {
+    margin: 8px 0 12px !important;
+    color: #fff !important;
+    font-size: clamp(28px, 4vw, 38px) !important;
+    line-height: 1.2;
+}
+
+.live-admin-container .live-page-header p {
+    margin: 0 !important;
+    color: #e0e8ec !important;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.live-admin-container .live-eyebrow,
+.live-admin-container .live-section-label {
+    display: block;
+    margin-bottom: 9px;
+    color: #e8bd68 !important;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.live-admin-container .live-back-button {
+    display: inline-block;
+    flex-shrink: 0;
+    padding: 13px 19px;
+    border: 1px solid rgba(255,255,255,.5);
+    border-radius: 8px;
+    color: white !important;
+    text-decoration: none !important;
+    font-size: 14px;
+    font-weight: 700;
+    transition: .25s;
+}
+
+.live-admin-container .live-back-button:hover {
+    background: #e8bd68;
+    border-color: #e8bd68;
+    color: #102d46 !important;
+}
+
+/* FORM AND TABLE CARDS */
+.live-admin-container .live-admin-panel {
+    display: block !important;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 0 30px !important;
+    padding: 30px !important;
+    background: #fff !important;
+    border: 1px solid #e5eaf0;
+    border-radius: 14px;
+    box-shadow: 0 7px 25px rgba(20, 40, 60, .07);
+}
+
+.live-admin-container .live-panel-heading {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 15px;
+    margin-bottom: 27px !important;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #e9edf1;
+}
+
+.live-admin-container .live-panel-heading h2 {
+    margin: 0 !important;
+    color: #173d32 !important;
+    font-size: 25px !important;
+    line-height: 1.3;
+}
+
+.live-admin-container .live-program-count {
+    padding: 8px 14px;
+    background: #edf4f0;
+    border-radius: 30px;
+    color: #173d32;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* FORM GRID */
+.live-admin-container .live-form-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 23px 25px !important;
+    width: 100%;
+}
+
+.live-admin-container .live-field {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    min-width: 0;
+    width: 100%;
+    margin: 0 !important;
+}
+
+.live-admin-container .live-full-width {
+    grid-column: 1 / -1 !important;
+    width: 100%;
+}
+
+.live-admin-container .live-field label {
+    display: block !important;
+    margin: 0 0 9px !important;
+    color: #243047 !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+}
+
+.live-admin-container .live-field label span {
+    color: #c0392b;
+}
+
+/* INPUTS, SELECTS AND TEXTAREAS */
+.live-admin-container .live-field input:not([type="checkbox"]),
+.live-admin-container .live-field select,
+.live-admin-container .live-field textarea {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: 47px;
+    box-sizing: border-box !important;
+    padding: 13px 15px !important;
+    margin: 0 !important;
+    border: 1px solid #d9e1e8 !important;
+    border-radius: 8px !important;
+    background: #fbfcfd !important;
+    color: #243047 !important;
+    font-family: Arial, "Noto Sans Ethiopic", sans-serif !important;
+    font-size: 14px !important;
+    outline: none !important;
+    box-shadow: none;
+    transition: border-color .2s, box-shadow .2s, background .2s;
+}
+
+.live-admin-container .live-field textarea {
+    min-height: 125px;
+    line-height: 1.7;
+    resize: vertical;
+}
+
+.live-admin-container .live-field input:focus,
+.live-admin-container .live-field select:focus,
+.live-admin-container .live-field textarea:focus {
+    border-color: #c99b42 !important;
+    background: #fff !important;
+    box-shadow: 0 0 0 4px rgba(201, 155, 66, .13) !important;
+}
+
+.live-admin-container .live-field input::placeholder,
+.live-admin-container .live-field textarea::placeholder {
+    color: #9aa5b1;
+}
+
+.live-admin-container .live-field small {
+    display: block;
+    margin-top: 8px;
+    color: #788493;
+    font-size: 12px;
+}
+
+/* PUBLISH CHECKBOX */
+.live-admin-container .live-publish-option {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 12px;
+    width: fit-content;
+    cursor: pointer;
+}
+
+.live-admin-container .live-publish-option input[type="checkbox"] {
+    width: 19px;
+    height: 19px;
+    margin: 0;
+    accent-color: #173d32;
+}
+
+/* FORM BUTTONS */
+.live-admin-container .live-form-actions {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 13px;
+    margin-top: 5px;
+}
+
+.live-admin-container .live-primary-button,
+.live-admin-container .live-secondary-button {
+    display: inline-flex !important;
+    justify-content: center;
+    align-items: center;
+    min-height: 46px;
+    box-sizing: border-box;
+    padding: 12px 23px !important;
+    border: none;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none !important;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.live-admin-container .live-primary-button {
+    background: #173d32 !important;
+    color: #fff !important;
+}
+
+.live-admin-container .live-primary-button:hover {
+    background: #102d46 !important;
+    transform: translateY(-2px);
+}
+
+.live-admin-container .live-secondary-button {
+    background: #edf0f3 !important;
+    color: #243047 !important;
+}
+
+.live-admin-container .live-secondary-button:hover {
+    background: #dce2e8 !important;
+}
+
+/* NOTIFICATIONS */
+.live-admin-container .live-notice {
+    padding: 16px 19px;
+    margin-bottom: 23px;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.live-admin-container .live-success {
+    background: #eaf7ef;
+    border-left: 5px solid #23844c;
+    color: #21643b;
+}
+
+.live-admin-container .live-error {
+    background: #fceeed;
+    border-left: 5px solid #c0392b;
+    color: #982c23;
+}
+
+/* PROGRAM TABLE */
+.live-admin-container .live-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid #e5e9ee;
+    border-radius: 9px;
+}
+
+.live-admin-container .live-program-table {
+    width: 100%;
+    min-width: 850px;
+    border-collapse: collapse !important;
+    background: #fff;
+}
+
+.live-admin-container .live-program-table th {
+    padding: 17px 15px;
+    background: #102d46 !important;
+    color: #fff !important;
+    text-align: left;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+.live-admin-container .live-program-table td {
+    padding: 17px 15px;
+    border-bottom: 1px solid #edf0f3;
+    color: #354256;
+    font-size: 13px;
+    vertical-align: middle;
+}
+
+.live-admin-container .live-program-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.live-admin-container .live-program-table tbody tr:hover {
+    background: #fafbf9;
+}
+
+.live-admin-container .live-program-title,
+.live-admin-container .live-amharic-title,
+.live-admin-container .live-time {
+    display: block;
+}
+
+.live-admin-container .live-program-title {
+    margin-bottom: 5px;
+    color: #102d46;
+    font-size: 14px;
+}
+
+.live-admin-container .live-amharic-title {
+    margin-bottom: 7px;
+    color: #647184;
+}
+
+.live-admin-container .live-time {
+    margin-top: 5px;
+    color: #748092;
+    font-size: 12px;
+}
+
+.live-admin-container .live-youtube-link {
+    display: inline-block;
+    margin-top: 5px;
+    color: #176b91;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* STATUS LABELS */
+.live-admin-container .live-status,
+.live-admin-container .live-visibility {
+    display: inline-block;
+    padding: 7px 11px;
+    border-radius: 25px;
+    font-size: 11px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.live-admin-container .status-scheduled {
+    background: #fff4d9;
+    color: #94620a;
+}
+
+.live-admin-container .status-live {
+    background: #e5f6ea;
+    color: #18733b;
+}
+
+.live-admin-container .status-ended {
+    background: #edf0f3;
+    color: #657184;
+}
+
+.live-admin-container .live-visibility.published {
+    background: #e5f6ea;
+    color: #18733b;
+}
+
+.live-admin-container .live-visibility.hidden {
+    background: #fceeed;
+    color: #a2382e;
+}
+
+/* ACTION BUTTONS */
+.live-admin-container .live-row-actions {
+    display: flex !important;
+    align-items: center;
+    gap: 8px;
+}
+
+.live-admin-container .live-edit-button,
+.live-admin-container .live-delete-button {
+    display: inline-block;
+    padding: 9px 13px;
+    border: none;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.live-admin-container .live-edit-button {
+    background: #e9f0f7;
+    color: #174a70;
+}
+
+.live-admin-container .live-delete-button {
+    background: #fceeed;
+    color: #a2382e;
+}
+
+.live-admin-container .live-delete-form {
+    margin: 0;
+}
+
+.live-admin-container .live-empty {
+    padding: 35px !important;
+    color: #748092 !important;
+    text-align: center;
+}
+
+/* FOOTER */
+.live-admin-footer {
+    padding: 25px 15px;
+    background: #102d46;
+    color: #dce5eb;
+    text-align: center;
+    font-size: 13px;
+}
+
+.live-admin-footer p {
+    margin: 5px 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .live-admin-container .live-page-header {
+        align-items: flex-start !important;
+        flex-direction: column !important;
+        padding: 25px !important;
+    }
+
+    .live-admin-container .live-form-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .live-admin-container .live-full-width {
+        grid-column: auto !important;
+    }
+
+    .live-admin-container .live-admin-panel {
+        padding: 20px !important;
+    }
+
+    .live-admin-container .live-panel-heading {
+        align-items: flex-start !important;
+        flex-direction: column !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .live-admin-container {
+        width: 92% !important;
+        margin-top: 20px !important;
+    }
+
+    .live-admin-container .live-page-header h1 {
+        font-size: 27px !important;
+    }
+
+    .live-admin-container .live-form-actions {
+        align-items: stretch;
+        flex-direction: column !important;
+    }
+
+    .live-admin-container .live-primary-button,
+    .live-admin-container .live-secondary-button {
+        width: 100%;
+    }
+}

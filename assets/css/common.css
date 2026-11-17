@@ -1,0 +1,745 @@
+
+/* =========================================
+   WALAYTA SODO KALEHIWOT CHURCH
+   SHARED WEBSITE STYLES
+========================================= */
+
+/* Global reset */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, "Noto Sans Ethiopic", sans-serif;
+    color: #263746;
+    background: #ffffff;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+/* Links */
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Navigation bar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 15px 6%;
+    background: #102d46;
+    color: #ffffff;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.12);
+    position: relative;
+    z-index: 100;
+}
+
+/* Church brand */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: bold;
+    color: #ffffff;
+    line-height: 1.4;
+    font-size: 17px;
+    min-width: 0;
+}
+
+.logo {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 25px;
+    color: #102d46;
+    background: #e4b65d;
+    flex-shrink: 0;
+}
+
+/* Navigation links */
+.navbar nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+.navbar nav a {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    position: relative;
+    padding: 6px 0;
+}
+
+.navbar nav a:hover,
+.navbar nav a:focus-visible {
+    color: #e4b65d;
+}
+
+/* Navigation hover underline */
+.navbar nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: #e4b65d;
+    transition: width 0.3s ease;
+}
+
+.navbar nav a:hover::after,
+.navbar nav a:focus-visible::after {
+    width: 100%;
+}
+
+/* Language links */
+.languages {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+}
+
+.languages a {
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 5px 8px;
+    border-radius: 4px;
+}
+
+.languages a:hover,
+.languages a:focus-visible {
+    color: #102d46;
+    background: #e4b65d;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4 {
+    color: #173d32;
+    font-weight: 700;
+    margin-top: 0;
+}
+
+h1 {
+    font-size: clamp(32px, 5vw, 58px);
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: clamp(25px, 3vw, 36px);
+    line-height: 1.3;
+}
+
+h3 {
+    font-size: 22px;
+    line-height: 1.4;
+}
+
+/* Paragraphs */
+p {
+    margin-top: 0;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Buttons */
+button,
+.btn {
+    display: inline-block;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 6px;
+    background: #bd8b36;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover,
+.btn:hover {
+    background: #9e7028;
+    transform: translateY(-2px);
+}
+
+/* Shared page container */
+.container {
+    width: min(90%, 1200px);
+    margin: 0 auto;
+}
+
+/* Shared section spacing */
+section {
+    scroll-margin-top: 85px;
+}
+
+/* Shared section heading */
+.section-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+/* Footer */
+footer {
+    padding: 30px 20px;
+    text-align: center;
+    color: #ffffff;
+    background: #102d46;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Keyboard accessibility */
+a:focus-visible,
+button:focus-visible,
+.btn:focus-visible {
+    outline: 3px solid #e4b65d;
+    outline-offset: 3px;
+}
+
+/* Responsive navigation */
+@media (max-width: 850px) {
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 16px 5%;
+    }
+
+    .brand {
+        justify-content: center;
+    }
+
+    .navbar nav {
+        width: 100%;
+        justify-content: center;
+        gap: 14px 20px;
+    }
+
+    .languages {
+        justify-content: center;
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 480px) {
+    .navbar {
+        gap: 12px;
+    }
+
+    .brand {
+        font-size: 15px;
+    }
+
+    .logo {
+        width: 36px;
+        height: 36px;
+        font-size: 21px;
+    }
+
+    .navbar nav {
+        gap: 10px 14px;
+    }
+
+    .navbar nav a {
+        font-size: 12px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    button,
+    .btn {
+        padding: 10px 17px;
+        font-size: 14px;
+    }
+
+    footer {
+        padding: 22px 15px;
+    }
+}
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
+
+/* =========================================
+   MOBILE HAMBURGER MENU
+========================================= */
+
+/* Hide hamburger button on desktop */
+.menu-toggle {
+    display: none;
+}
+
+/* Mobile and tablet navigation */
+@media (max-width: 850px) {
+
+    .navbar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        padding: 15px 5%;
+    }
+
+    .brand {
+        justify-content: flex-start;
+        flex: 1;
+    }
+
+    /* Show hamburger button */
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        width: 42px;
+        height: 42px;
+        padding: 8px;
+        background: transparent;
+        border: 2px solid #e4b65d;
+        border-radius: 6px;
+        cursor: pointer;
+        flex-shrink: 0;
+    }
+
+    .menu-toggle span {
+        display: block;
+        width: 22px;
+        height: 2px;
+        background: #ffffff;
+        border-radius: 3px;
+        transition: 0.3s ease;
+    }
+
+    .menu-toggle:hover {
+        background: #244760;
+        transform: none;
+    }
+
+    /* Hide navigation until opened */
+    .navbar nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 10px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    /* Display navigation when menu is open */
+    .navbar.menu-open nav {
+        display: flex;
+    }
+
+    .navbar nav a {
+        display: block;
+        width: 100%;
+        padding: 12px 10px;
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .navbar nav a::after {
+        display: none;
+    }
+
+    /* Language buttons */
+    .languages {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Turn hamburger into an X */
+    .navbar.menu-open .menu-toggle span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .navbar.menu-open .menu-toggle span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .navbar.menu-open .menu-toggle span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+}
+
+/* Small mobile screens */
+@media (max-width: 480px) {
+
+    .navbar {
+        padding: 12px 4%;
+        gap: 10px;
+    }
+
+    .brand {
+        font-size: 13px;
+        gap: 8px;
+    }
+
+    .logo {
+        width: 36px;
+        height: 36px;
+        font-size: 21px;
+    }
+
+    .menu-toggle {
+        width: 38px;
+        height: 38px;
+    }
+
+    .languages {
+        gap: 5px;
+    }
+
+    .languages a {
+        font-size: 12px;
+        padding: 5px;
+    }
+}
+
+/* =========================================
+   CHURCH IMAGE LOGO
+========================================= */
+
+.logo-image {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    border-radius: 50%;
+    flex-shrink: 0;
+    background: #ffffff;
+}
+
+/* Mobile logo */
+@media (max-width: 480px) {
+    .logo-image {
+        width: 38px;
+        height: 38px;
+    }
+}
+
+/* =========================================
+   SHARED CHURCH HEADER AND MOBILE NAVIGATION
+========================================= */
+
+.logo-image {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    border-radius: 50%;
+    background: #ffffff;
+    padding: 2px;
+    flex-shrink: 0;
+}
+
+.brand-name {
+    max-width: 230px;
+}
+
+.navbar {
+    min-height: 76px;
+}
+
+.navbar nav a.current {
+    color: #e4b65d;
+}
+
+.languages a.active {
+    color: #e4b65d;
+    border-bottom: 2px solid #e4b65d;
+}
+
+.menu-toggle {
+    display: none;
+    width: 42px;
+    height: 40px;
+    padding: 9px;
+    background: transparent;
+    border: 1px solid #e4b65d;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    margin: 4px 0;
+    background: #ffffff;
+    border-radius: 2px;
+}
+
+@media (max-width: 850px) {
+    .navbar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 12px 5%;
+    }
+
+    .brand {
+        flex: 1;
+        min-width: 0;
+        font-size: 14px;
+        justify-content: flex-start;
+    }
+
+    .brand-name {
+        max-width: 180px;
+    }
+
+    .logo-image {
+        width: 42px;
+        height: 42px;
+    }
+
+    .menu-toggle {
+        display: block;
+        order: 2;
+        flex-shrink: 0;
+    }
+
+    .languages {
+        order: 3;
+        gap: 7px;
+        font-size: 12px;
+    }
+
+    .navbar nav {
+        display: none;
+        order: 4;
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 8px 0;
+        border-top: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .navbar.menu-open nav {
+        display: flex;
+    }
+
+    .navbar nav a {
+        display: block;
+        text-align: center;
+        padding: 12px 8px;
+        font-size: 14px;
+    }
+
+    .navbar nav a::after {
+        display: none;
+    }
+}
+
+@media (max-width: 380px) {
+    .brand {
+        font-size: 12px;
+        gap: 7px;
+    }
+
+    .brand-name {
+        max-width: 130px;
+    }
+
+    .logo-image {
+        width: 36px;
+        height: 36px;
+    }
+
+    .menu-toggle {
+        width: 38px;
+        height: 36px;
+        padding: 7px;
+    }
+
+    .languages {
+        font-size: 11px;
+    }
+}
+
+/* =========================================
+   ADMIN HEADER ONLY
+   Does not change the public website header
+========================================= */
+
+.admin-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 12px;
+    padding: 12px 2%;
+}
+
+.admin-navbar .brand {
+    flex: 0 1 auto;
+    min-width: 0;
+    gap: 8px;
+}
+
+.admin-navbar .brand-name {
+    max-width: 190px;
+    font-size: 14px;
+}
+
+.admin-navbar .logo-image {
+    width: 42px;
+    height: 42px;
+}
+
+/* Admin navigation links */
+.admin-navbar nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    gap: 10px;
+    width: auto;
+    padding: 0;
+    border: none;
+    white-space: nowrap;
+}
+
+.admin-navbar nav a {
+    display: inline-block;
+    width: auto;
+    padding: 6px 0;
+    font-size: 12px;
+}
+
+/* Language selector inside admin navigation */
+.admin-navbar .languages {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    gap: 5px;
+    margin: 0;
+}
+
+.admin-navbar .languages a {
+    width: auto;
+    padding: 5px;
+    font-size: 12px;
+}
+
+.admin-navbar .menu-toggle {
+    display: none;
+}
+
+/* Admin tablet and mobile navigation */
+@media (max-width: 1100px) {
+
+    .admin-navbar {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 12px 5%;
+    }
+
+    .admin-navbar .brand {
+        flex: 1;
+    }
+
+    .admin-navbar .menu-toggle {
+        display: flex;
+        order: 2;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        width: 40px;
+        height: 40px;
+        padding: 8px;
+    }
+
+    .admin-navbar .menu-toggle span {
+        width: 22px;
+        height: 2px;
+        margin: 0;
+    }
+
+    .admin-navbar nav {
+        display: none;
+        order: 3;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        gap: 0;
+        padding: 10px 0;
+        border-top: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .admin-navbar.menu-open nav {
+        display: flex;
+    }
+
+    .admin-navbar nav a {
+        display: block;
+        width: 100%;
+        padding: 11px 10px;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .admin-navbar nav a::after {
+        display: none;
+    }
+
+    .admin-navbar .languages {
+        justify-content: center;
+        padding: 10px;
+    }
+}

@@ -1,0 +1,399 @@
+
+/* =====================================
+   SERMON MANAGEMENT PAGE
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6fa;
+    color: #263238;
+    line-height: 1.6;
+}
+
+.admin-container {
+    width: 95%;
+    max-width: 1400px;
+    margin: 35px auto;
+}
+
+/* =====================================
+   ADMIN NAVIGATION HEADER
+===================================== */
+
+.admin-navbar {
+    background: #102d46;
+    color: #ffffff;
+}
+
+.admin-brand-label {
+    display: block;
+    font-size: 11px;
+    font-weight: normal;
+    color: #e4b65d;
+    margin-top: 3px;
+}
+
+.admin-navbar nav {
+    gap: 16px;
+}
+
+.admin-navbar nav a {
+    font-size: 13px;
+}
+
+/* =====================================
+   PAGE HEADER
+===================================== */
+
+.page-header {
+    background: #ffffff;
+    padding: 25px 30px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+.page-header h1 {
+    color: #17365d;
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.page-header p {
+    color: #777;
+    font-size: 15px;
+}
+
+.back-button {
+    display: inline-block;
+    background: #17365d;
+    color: #ffffff;
+    padding: 11px 20px;
+    text-decoration: none;
+    border-radius: 7px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.back-button:hover {
+    background: #24558c;
+}
+
+/* =====================================
+   ALERT MESSAGES
+===================================== */
+
+.alert {
+    padding: 14px 18px;
+    border-radius: 7px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.alert-error {
+    background: #fde8e8;
+    color: #a61b1b;
+    border-left: 5px solid #dc3545;
+}
+
+.alert-success {
+    background: #e5f7eb;
+    color: #176b35;
+    border-left: 5px solid #28a745;
+}
+
+/* =====================================
+   FORM SECTION
+===================================== */
+
+.sermon-form-section,
+.sermon-list-section {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+.sermon-form-section h2,
+.sermon-list-section h2 {
+    color: #17365d;
+    font-size: 22px;
+    margin-bottom: 22px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #edf0f5;
+}
+
+.sermon-form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #374151;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #d5dbe5;
+    border-radius: 7px;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    background: #ffffff;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #24558c;
+    box-shadow: 0 0 0 3px rgba(36, 85, 140, 0.12);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 110px;
+}
+
+.form-actions {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 5px;
+}
+
+.submit-button,
+.cancel-button {
+    display: inline-block;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.submit-button {
+    background: #198754;
+    color: #ffffff;
+}
+
+.submit-button:hover {
+    background: #146c43;
+}
+
+.cancel-button {
+    background: #6c757d;
+    color: #ffffff;
+}
+
+.cancel-button:hover {
+    background: #565e64;
+}
+
+/* =====================================
+   SERMON TABLE
+===================================== */
+
+.sermon-count {
+    color: #777;
+    margin-top: -12px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.sermon-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 850px;
+}
+
+.sermon-table thead {
+    background: #17365d;
+    color: #ffffff;
+}
+
+.sermon-table th {
+    padding: 15px 12px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.sermon-table td {
+    padding: 14px 12px;
+    border-bottom: 1px solid #edf0f5;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+.sermon-table tbody tr:hover {
+    background: #f5f8fc;
+}
+
+.sermon-table a {
+    color: #24558c;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.sermon-table a:hover {
+    text-decoration: underline;
+}
+
+/* =====================================
+   ACTION BUTTONS
+===================================== */
+
+.action-buttons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.edit-button,
+.delete-button {
+    display: inline-block;
+    padding: 7px 13px;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.edit-button {
+    background: #0d6efd;
+    color: #ffffff !important;
+}
+
+.edit-button:hover {
+    background: #084298;
+}
+
+.delete-form {
+    display: inline;
+    margin: 0;
+}
+
+.delete-button {
+    background: #dc3545;
+    color: #ffffff;
+}
+
+.delete-button:hover {
+    background: #b02a37;
+}
+
+/* =====================================
+   EMPTY STATE
+===================================== */
+
+.empty-state {
+    text-align: center;
+    padding: 35px 20px;
+    background: #f8f9fc;
+    border: 1px dashed #cbd3df;
+    border-radius: 8px;
+    color: #777;
+}
+
+/* =====================================
+   ADMIN FOOTER
+===================================== */
+
+.admin-footer {
+    background: #102d46;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 15px;
+    margin-top: 50px;
+    font-size: 13px;
+}
+
+.admin-footer p {
+    margin: 5px 0;
+}
+
+/* =====================================
+   RESPONSIVE DESIGN
+===================================== */
+
+@media (max-width: 768px) {
+
+    .admin-container {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .page-header h1 {
+        font-size: 23px;
+    }
+
+    .sermon-form-section,
+    .sermon-list-section {
+        padding: 20px;
+    }
+
+    .sermon-form {
+        grid-template-columns: 1fr;
+    }
+
+    .form-actions {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .page-header h1 {
+        font-size: 20px;
+    }
+
+    .submit-button,
+    .cancel-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .form-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}

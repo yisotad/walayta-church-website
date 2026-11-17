@@ -1,0 +1,621 @@
+
+/* =====================================
+   CHURCH EVENTS PAGE
+===================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, "Noto Sans Ethiopic", "Nyala", sans-serif;
+    background: #f5f7fa;
+    color: #263449;
+    line-height: 1.7;
+}
+
+/* Header */
+
+.events-header {
+    background: linear-gradient(135deg, #173b63, #286b87);
+    color: white;
+    text-align: center;
+    padding: 48px 20px;
+}
+
+.events-header h1 {
+    margin: 0 0 8px;
+    font-size: clamp(27px, 4vw, 40px);
+}
+
+.events-header p {
+    margin: 0;
+}
+
+/* Navigation */
+
+.events-nav {
+    background: white;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, .06);
+}
+
+.events-nav a {
+    color: #173b63;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.events-nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main container */
+
+.events-container {
+    width: min(1100px, 92%);
+    margin: 35px auto 60px;
+}
+
+/* Heading and language buttons */
+
+.events-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 24px;
+}
+
+.events-heading h2 {
+    color: #173b63;
+    margin: 0;
+    font-size: clamp(22px, 3vw, 30px);
+}
+
+.language-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.language-buttons button {
+    border: 1px solid #173b63;
+    padding: 9px 15px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    background: white;
+    color: #173b63;
+    transition: background .2s ease, color .2s ease;
+}
+
+.language-buttons button:hover {
+    background: #e9eff5;
+}
+
+.language-buttons button.active {
+    background: #173b63;
+    color: white;
+}
+
+/* Event grid */
+
+.event-grid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(min(100%, 300px), 1fr)
+    );
+    gap: 22px;
+}
+
+/* Event card */
+
+.event-card {
+    background: white;
+    border-radius: 10px;
+    padding: 23px;
+    border-top: 4px solid #d0a64b;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, .06);
+    overflow-wrap: anywhere;
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 7px 18px rgba(0, 0, 0, .10);
+}
+
+.event-card h3 {
+    color: #173b63;
+    font-size: 22px;
+    margin: 0 0 12px;
+}
+
+/* Date and location */
+
+.event-date {
+    color: #23664b;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.event-location {
+    color: #59677a;
+    margin-bottom: 12px;
+}
+
+.event-description {
+    white-space: pre-line;
+    overflow-wrap: anywhere;
+}
+
+/* Event status */
+
+.status {
+    display: inline-block;
+    background: #e4f5e9;
+    color: #205c36;
+    padding: 3px 9px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.status.past {
+    background: #edf0f4;
+    color: #5d6674;
+}
+
+/* Empty events message */
+
+.empty {
+    background: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, .05);
+}
+
+/* Amharic text */
+
+.am {
+    font-family: "Noto Sans Ethiopic", "Nyala", sans-serif;
+    line-height: 1.8;
+}
+
+/* Language switching
+   Controlled by the hidden attribute in events.php */
+
+[hidden] {
+    display: none !important;
+}
+
+/* Footer */
+
+.events-footer {
+    background: #142b43;
+    color: white;
+    text-align: center;
+    padding: 35px 20px 25px;
+    margin-top: 50px;
+}
+
+.events-footer p {
+    margin: 0 0 12px;
+}
+
+/* Footer logo */
+
+.events-footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.events-footer-logo {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    border: 3px solid #d4af37;
+    background: #ffffff;
+    display: block;
+    margin: 0 auto 12px;
+}
+
+.events-footer-brand h3 {
+    margin: 0 0 8px;
+}
+
+/* Footer links */
+
+.events-footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 18px;
+}
+
+.events-footer-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.events-footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile responsive */
+
+@media (max-width: 600px) {
+
+    .events-header {
+        padding: 35px 15px;
+    }
+
+    .events-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .events-nav {
+        gap: 15px;
+    }
+
+    .event-card {
+        padding: 18px;
+    }
+
+    .events-footer-logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .events-footer-links {
+        gap: 12px;
+    }
+
+    .events-container {
+        width: 94%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+/* =================================
+   EVENTS HERO SECTION
+================================= */
+
+.events-hero {
+    width: 100%;
+    min-height: 380px;
+    background-image: url("../images/worship.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.events-hero-overlay {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    min-height: 100%;
+    background: linear-gradient(
+        rgba(10, 25, 40, 0.65),
+        rgba(10, 25, 40, 0.72)
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+}
+
+.events-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 850px;
+    color: #ffffff;
+}
+
+.events-hero-subtitle {
+    display: inline-block;
+    color: #e8bd68;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.events-hero-content h1 {
+    color: #ffffff;
+    font-size: clamp(32px, 5vw, 52px);
+    font-weight: 700;
+    margin: 0 0 18px;
+    line-height: 1.2;
+}
+
+.events-hero-content p {
+    color: #f2f2f2;
+    font-size: 17px;
+    line-height: 1.8;
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    .events-hero {
+        min-height: 300px;
+    }
+
+    .events-hero-overlay {
+        padding: 35px 18px;
+    }
+
+    .events-hero-subtitle {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    .events-hero-content p {
+        font-size: 14px;
+    }
+}
+/* Space between navigation header and hero */
+.events-hero {
+    margin-top: 25px;
+}
+
+/* =====================================
+   UPCOMING AND PAST EVENTS
+===================================== */
+
+.events-group {
+    margin: 45px 0;
+}
+
+.events-group .events-heading h2 {
+    font-size: 28px;
+    color: #173d32;
+    margin-bottom: 25px;
+    padding-bottom: 12px;
+    border-bottom: 3px solid #c99b42;
+}
+
+.events-group .event-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.events-group .event-card {
+    position: relative;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e5e5e5;
+}
+
+.events-group .event-card h3 {
+    color: #173d32;
+    margin: 18px 0 12px;
+}
+
+.events-group .event-card p {
+    line-height: 1.7;
+}
+
+.events-group .status {
+    display: inline-block;
+    padding: 6px 13px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.events-group .upcoming-status {
+    background: #e0f3e7;
+    color: #176b37;
+}
+
+.events-group .past-status {
+    background: #eeeeee;
+    color: #666666;
+}
+
+.events-group .past-card {
+    background: #f7f7f7;
+    border-color: #e2e2e2;
+}
+
+.events-group .event-date,
+.events-group .event-location {
+    font-size: 14px;
+    color: #555555;
+    margin: 12px 0;
+}
+
+.events-group .event-description {
+    margin-top: 15px;
+    line-height: 1.7;
+    color: #444444;
+}
+
+.events-group .empty {
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    color: #666666;
+}
+
+.past-events {
+    margin-top: 60px;
+    padding-top: 25px;
+    border-top: 1px solid #e5e5e5;
+}
+
+@media (max-width: 600px) {
+
+    .events-group .events-heading h2 {
+        font-size: 23px;
+    }
+
+    .events-group .event-card {
+        padding: 18px;
+    }
+
+}
+
+/* =====================================
+   PREMIUM CHURCH EVENT CARD DESIGN
+===================================== */
+
+.events-group .event-card {
+    position: relative;
+    overflow: hidden;
+    padding: 28px;
+    border-radius: 16px;
+
+    background: linear-gradient(
+        145deg,
+        #ffffff,
+        #f7f3ea
+    );
+
+    border: 1px solid #e4d6b5;
+
+    border-left: 5px solid #c99b42;
+
+    box-shadow: 0 7px 22px rgba(23, 61, 50, 0.09);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+/* Decorative gold line */
+.events-group .event-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 75px;
+    height: 4px;
+    background: #c99b42;
+    border-radius: 0 0 0 8px;
+}
+
+/* Hover effect */
+.events-group .event-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 13px 30px rgba(23, 61, 50, 0.15);
+}
+
+/* Event title */
+.events-group .event-card h3 {
+    color: #173d32;
+    font-size: 21px;
+    line-height: 1.4;
+    margin: 20px 0 16px;
+}
+
+/* Event status */
+.events-group .status {
+    display: inline-block;
+    padding: 7px 15px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* Upcoming event */
+.events-group .upcoming-card {
+    background: linear-gradient(
+        145deg,
+        #ffffff,
+        #f7f3e9
+    );
+    border-left-color: #c99b42;
+}
+
+.events-group .upcoming-status {
+    background: #e0f1e5;
+    color: #176b37;
+}
+
+/* Past event */
+.events-group .past-card {
+    background: linear-gradient(
+        145deg,
+        #f5f6f7,
+        #e9ecef
+    );
+    border: 1px solid #d9dde1;
+    border-left: 5px solid #89939d;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.events-group .past-card::before {
+    background: #89939d;
+}
+
+.events-group .past-card h3 {
+    color: #46515c;
+}
+
+.events-group .past-status {
+    background: #e1e5e9;
+    color: #58636e;
+}
+
+/* Event date and location */
+.events-group .event-date,
+.events-group .event-location {
+    padding: 10px 12px;
+    margin: 12px 0;
+    background: rgba(255, 255, 255, 0.75);
+    border-radius: 8px;
+    color: #475467;
+    font-size: 14px;
+}
+
+/* Event description */
+.events-group .event-description {
+    color: #475467;
+    line-height: 1.8;
+    margin-top: 17px;
+    padding-top: 14px;
+    border-top: 1px solid #e5dfd1;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .events-group .event-card {
+        padding: 21px;
+    }
+
+    .events-group .event-card h3 {
+        font-size: 19px;
+    }
+}

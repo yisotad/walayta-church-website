@@ -1,0 +1,82 @@
+
+/* Admin login page styles */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background: #eef2ef;
+    color: #20352b;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 420px;
+    background: #ffffff;
+    padding: 32px;
+    border-radius: 14px;
+    box-shadow: 0 8px 30px #14213d15;
+}
+
+h1 {
+    font-size: 26px;
+}
+
+label {
+    display: block;
+    margin-top: 16px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 7px;
+    border: 1px solid #ccd5cf;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 13px;
+    margin-top: 24px;
+    border: 0;
+    border-radius: 6px;
+    background: #1d503b;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #28694d;
+}
+
+.error {
+    color: #b42318;
+}
+
+.muted {
+    color: #66756c;
+}
+
+.login-card a {
+    color: #1d503b;
+}
+
+.login-card a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+    .login-card {
+        padding: 24px;
+    }
+}
